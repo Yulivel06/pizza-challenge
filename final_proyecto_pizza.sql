@@ -15,7 +15,7 @@ WITH revenue_order AS (
 SELECT ROUND(AVG(revenue_order),2) avg_revenue_order
 FROM revenue_order;
 
--- Total pizzas vendidas
+-- Total pizzas solds
 
 SELECT
     sum(quantity) AS quantity_pizzas_year
