@@ -23,8 +23,8 @@ Este es un conjunto de datos de #mavenchallenge disponible [Aquí](https://www.m
 
 ### Pasos a seguir 
 
- 1. Creamos cada una de nuestras tablas. 
- ```
+ **1. Creamos cada una de nuestras tablas.**
+ ``` sql
 create table order_details  (  
     order_details_id integer not null  primary key,  
     order_id         integer,  
@@ -32,14 +32,14 @@ create table order_details  (
 	quantity         integer  
 );
 ```
- ```
+ ``` sql
 create table orders  (  
     order_id integer not null  primary key, 
     date     date, 
     time     time
 );
 ```
- ```
+ ``` sql
 create table pizzas_types  (  
     pizza_type_id varchar(40) not null  primary key, 
     name   varchar(40),  
@@ -47,7 +47,7 @@ create table pizzas_types  (
    ingredients  varchar(1000)
 );
 ```
- ```
+ ``` sql
 create table pizzas  (  
     pizza_id      varchar(40) not null  
 	primary key,  pizza_type_id varchar(40),  
@@ -56,10 +56,13 @@ create table pizzas  (
 );
 ```
 
-2. Importamos nuestros archivos CSV 
+**2. Importamos nuestros archivos CSV**
 
-3. Ahora, es momento de explorar y analizar nuestros datos 
- ```
+Los archivos CSV estan ubicados en la carpeta **datasets**.
+
+**3. Ahora, es momento de explorar y analizar nuestros datos**
+
+``` sql
 -- Total Revenue  
 SELECT  
   SUM(quantity*price) AS TOTAL_VENTAS  
