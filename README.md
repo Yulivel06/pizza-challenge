@@ -11,28 +11,55 @@
 -   La tabla **Pizza Types** contiene detalles sobre los tipos de pizza en la tabla Pizzas, incluido su nombre tal como aparece en el menú, la categoría a la que pertenece y su lista de ingredientes.
 
 ### ¿Qué herramientas usamos para analizar estos datos?
-- AWS S3 (almacenar los datos)
-- Glue 
-- Athena (para analizar los datos)
+- PostgreSQL (Análisis exploratorio de datos)
 - Power BI (visualización de datos) 
 
-### Pasos a seguir para importar nuestros datos
+### Pasos a seguir 
 
- 1. Inicialmente, utilizando el servicio de amazon S3 almacenamos e importamos nuestros objetos (archivos CSV) en el "Bucket". 
- Para esto, creamos primeramente nuestro Bucket que debe contener un nombre único en todo amazon web services. 
-  2. Creamos una carpeta para cada archivo CSV (order, order_details, pizzas_types, pizzas)
-  3. Cargamos cada archivo CSV a su respectiva carpeta. 
- 
- Ahora, con  para conectar Athena con nuestros archivos CSV usamos **AWS Glue**  para esto: 
-1.  Utilizamos crawler (rastreadores) para acceder a los archivos en S3 y se  crean las tablas. 
+ 1. Creamos cada una de nuestras tablas. 
+ ```
+create table order_details  (  
+    order_details_id integer not null  primary key,  
+    order_id         integer,  
+	pizza_id         varchar(40),  
+	quantity         integer  
+);
+```
+ ```
+create table orders  (  
+    order_id integer not null  primary key, 
+    date     date, 
+    time     time
+);
+```
+ ```
+create table pizzas_types  (  
+    pizza_type_id varchar(40) not null  primary key, 
+    name   varchar(40),  
+	category  varchar(40),  
+   ingredients  varchar(1000)
+);
+```
+ ```
+create table pizzas  (  
+    pizza_id      varchar(40) not null  
+	primary key,  pizza_type_id varchar(40),  
+    size          char(5),  
+    price         numeric(10, 2)  
+);
+```
 
-Conectamos con athena y empezamos a relizar las consultas 
+2. Exportamos nuestros archivos CSV 
 
-Por útlimo, pasamos cada consulta a graficar en Power BI. 
+3. Ahora, es momento de explorar y analizar nuestros datos 
+
+4. Por útlimo, pasamos cada consulta a graficar en Power BI. 
  (Es hora de visualizar deja volar tu imaginación) 
- 
+
  [Mira aquí mi informe]https://app.powerbi.com/view?r=eyJrIjoiZDNjNTgzMzctN2NhMy00Mjk1LWE5NzEtYjgyM2UyYzFhZjEwIiwidCI6IjcwOTg2ZWU0LTUzNzktNDU4Ni1iZDIzLTVhOTBiNGVjMmMwZSJ9&pageName=ReportSection
 
 
  
+ 
+
  
