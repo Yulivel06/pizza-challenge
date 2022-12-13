@@ -1,6 +1,13 @@
-> # Descripción 
-> Este es un conjunto de datos de #mavenchallenge disponible [Aquí](https://www.mavenanalytics.io/data-playground)
-> 
+# Panel pizzas - resultado final 
+
+![enter image description here](https://github.com/Yulivel06/pizza-challenge/blob/main/docu/panel_pizzas.jpg)
+
+  [**Mira aquí mi informe**](https://app.powerbi.com/view?r=eyJrIjoiZDNjNTgzMzctN2NhMy00Mjk1LWE5NzEtYjgyM2UyYzFhZjEwIiwidCI6IjcwOTg2ZWU0LTUzNzktNDU4Ni1iZDIzLTVhOTBiNGVjMmMwZSJ9&pageName=ReportSection)
+  
+
+# Descripción 
+Este es un conjunto de datos de #mavenchallenge disponible [Aquí](https://www.mavenanalytics.io/data-playground)
+
 ### Descripcion del conjunto de datos
 
 
@@ -156,8 +163,7 @@ ORDER BY total_ingredientes, PER_SOLD DESC;
 4. Por útlimo, graficamos nuestras consultas en nuestra herramienta de visualización preferida.  
  (Es hora de visualizar deja volar tu imaginación) 
  
-  [Mira aquí mi informe]https://app.powerbi.com/view?r=eyJrIjoiZDNjNTgzMzctN2NhMy00Mjk1LWE5NzEtYjgyM2UyYzFhZjEwIiwidCI6IjcwOTg2ZWU0LTUzNzktNDU4Ni1iZDIzLTVhOTBiNGVjMmMwZSJ9&pageName=ReportSection
- 
+
 
 
 
