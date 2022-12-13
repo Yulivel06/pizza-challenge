@@ -55,6 +55,8 @@ create table pizzas  (
 
 4. Por útlimo, pasamos cada consulta a graficar en Power BI. 
  (Es hora de visualizar deja volar tu imaginación) 
+ 
+ [![panel.png](https://i.postimg.cc/zfvjhxm7/panel.png)](https://postimg.cc/7Cv08MZJ)
 
  [Mira aquí mi informe]https://app.powerbi.com/view?r=eyJrIjoiZDNjNTgzMzctN2NhMy00Mjk1LWE5NzEtYjgyM2UyYzFhZjEwIiwidCI6IjcwOTg2ZWU0LTUzNzktNDU4Ni1iZDIzLTVhOTBiNGVjMmMwZSJ9&pageName=ReportSection
 
