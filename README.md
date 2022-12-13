@@ -49,7 +49,7 @@ create table pizzas  (
 );
 ```
 
-2. Exportamos nuestros archivos CSV 
+2. Importamos nuestros archivos CSV 
 
 3. Ahora, es momento de explorar y analizar nuestros datos 
  ```
@@ -153,12 +153,14 @@ ORDER BY total_ingredientes, PER_SOLD DESC;
 ```
 
 
-4. Por útlimo, pasamos cada consulta a graficar en Power BI. 
+4. Por útlimo, graficamos nuestras consultas en nuestra herramienta de visualización preferida.  
  (Es hora de visualizar deja volar tu imaginación) 
  
- [![panel.png](https://i.postimg.cc/zfvjhxm7/panel.png)](https://postimg.cc/7Cv08MZJ)
+  [Mira aquí mi informe]https://app.powerbi.com/view?r=eyJrIjoiZDNjNTgzMzctN2NhMy00Mjk1LWE5NzEtYjgyM2UyYzFhZjEwIiwidCI6IjcwOTg2ZWU0LTUzNzktNDU4Ni1iZDIzLTVhOTBiNGVjMmMwZSJ9&pageName=ReportSection
+ 
 
- [Mira aquí mi informe]https://app.powerbi.com/view?r=eyJrIjoiZDNjNTgzMzctN2NhMy00Mjk1LWE5NzEtYjgyM2UyYzFhZjEwIiwidCI6IjcwOTg2ZWU0LTUzNzktNDU4Ni1iZDIzLTVhOTBiNGVjMmMwZSJ9&pageName=ReportSection
+
+
 
 
  
