@@ -1,4 +1,3 @@
-
 > # Descripción 
 > Este es un conjunto de datos de #mavenchallenge disponible [Aquí](https://www.mavenanalytics.io/data-playground)
 > 
@@ -24,5 +23,16 @@
   2. Creamos una carpeta para cada archivo CSV (order, order_details, pizzas_types, pizzas)
   3. Cargamos cada archivo CSV a su respectiva carpeta. 
  
- Ahora, con **AWS Glue** 
+ Ahora, con  para conectar Athena con nuestros archivos CSV usamos **AWS Glue**  para esto: 
+1.  Utilizamos crawler (rastreadores) para acceder a los archivos en S3 y se  crean las tablas. 
+
+Conectamos con athena y empezamos a relizar las consultas 
+
+Por útlimo, pasamos cada consulta a graficar en Power BI. 
+ (Es hora de visualizar deja volar tu imaginación) 
+ 
+ [Mira aquí mi informe]https://app.powerbi.com/view?r=eyJrIjoiZDNjNTgzMzctN2NhMy00Mjk1LWE5NzEtYjgyM2UyYzFhZjEwIiwidCI6IjcwOTg2ZWU0LTUzNzktNDU4Ni1iZDIzLTVhOTBiNGVjMmMwZSJ9&pageName=ReportSection
+
+
+ 
  
