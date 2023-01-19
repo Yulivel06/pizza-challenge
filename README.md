@@ -112,8 +112,8 @@ FROM quantity_pizza_order;
     FROM ingredients_per_pizza  
     GROUP BY name, pizza_type_id  
 )  
-select avg(total_ingredientes)  
-from number_ingredients_pizza;  
+SELECT avg(total_ingredientes)  
+FROM number_ingredients_pizza;  
   
 -- Hours and days peaks  
   
