@@ -161,8 +161,13 @@ SELECT
 	GROUP BY name, pizza_type_id  
 	ORDER BY total_ingredientes DESC  
 )  
-SELECT tp.name, per_sold, total_ventas_pizza, total_ingredientes  
-FROM total_final AS tp inner join total_ingredientes_final USING (pizza_type_id)  
+SELECT 
+	tp.name, 
+	per_sold, 
+	total_ventas_pizza, 
+	total_ingredientes  
+FROM total_final AS tp 
+inner join total_ingredientes_final USING (pizza_type_id)  
 ORDER BY total_ingredientes, PER_SOLD DESC;
 ```
 
