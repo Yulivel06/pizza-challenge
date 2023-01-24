@@ -25,7 +25,7 @@ Este es un conjunto de datos de #mavenchallenge disponible [Aquí](https://www.m
 
  **1. Creamos cada una de nuestras tablas.**
  ``` sql
-create table order_details  (  
+CREATE TABLE order_details  (  
     order_details_id integer not null  primary key,  
     order_id         integer,  
 	pizza_id         varchar(40),  
@@ -33,14 +33,14 @@ create table order_details  (
 );
 ```
  ``` sql
-create table orders  (  
+CREATE TABLE orders  (  
     order_id integer not null  primary key, 
     date     date, 
     time     time
 );
 ```
  ``` sql
-create table pizzas_types  (  
+CREATE TABLE pizzas_types  (  
     pizza_type_id varchar(40) not null  primary key, 
     name   varchar(40),  
 	category  varchar(40),  
@@ -48,7 +48,7 @@ create table pizzas_types  (
 );
 ```
  ``` sql
-create table pizzas  (  
+CREATE TABLE pizzas  (  
     pizza_id      varchar(40) not null  
 	primary key,  pizza_type_id varchar(40),  
     size          char(5),  
