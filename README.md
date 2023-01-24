@@ -71,7 +71,8 @@ INNER JOIN pizzas AS p USING (pizza_id);
   
 -- Average revenue per order  
 WITH revenue_order AS (  
-    SELECT SUM(quantity*price) AS revenue_order  
+   SELECT 
+   	SUM(quantity*price) AS revenue_order  
    FROM orders AS o  
    INNER JOIN order_details AS od USING (order_id)  
    INNER JOIN pizzas AS p USING (pizza_id)  
@@ -89,26 +90,27 @@ FROM order_details;
 -- Average pizza by order  
 WITH quantity_pizza_order AS (  
     SELECT  
-  SUM(quantity) quantity_pizzas  
+    	SUM(quantity) quantity_pizzas  
     FROM order_details  
     GROUP BY order_id  
 )  
-SELECT round( AVG(quantity_pizzas), 2) avg_pizza_order  
+SELECT 
+	round( AVG(quantity_pizzas), 2) avg_pizza_order  
 FROM quantity_pizza_order;  
   
 -- Ingredients per pizza  
   
-  WITH ingredients_per_pizza AS (  
-        SELECT  
-  pt.pizza_type_id,  
-  pt.name,  
- y.ingredients  
+WITH ingredients_per_pizza AS (  
+   SELECT  
+	  pt.pizza_type_id,  
+	  pt.name,  
+	 y.ingredients  
   FROM pizzas_types AS pt  
         LEFT   JOIN unnest(string_to_array(pt.ingredients, ', '))  AS y(ingredients) ON true),  
   number_ingredients_pizza AS (  
     SELECT  
- name, pizza_type_id,  
-  count(ingredients) AS total_ingredientes  
+ 	name, pizza_type_id,  
+  	count(ingredients) AS total_ingredientes  
     FROM ingredients_per_pizza  
     GROUP BY name, pizza_type_id  
 )  
