@@ -148,16 +148,18 @@ SELECT
     GROUP BY pizza_type_id,name  
 ),  
 total_ingredientes_final AS (  
-WITH INGREDIENTES AS (  
-    SELECT pt.pizza_type_id, pt.name, y.ingredients  
-  FROM pizzas_types AS pt  
-    LEFT   JOIN unnest(string_to_array(pt.ingredients, ', '))  AS y(ingredients) ON true)  
+	WITH INGREDIENTES AS (  
+    		SELECT pt.pizza_type_id, pt.name, y.ingredients  
+  		FROM pizzas_types AS pt  
+    		LEFT   JOIN unnest(string_to_array(pt.ingredients, ', '))  AS y(ingredients) ON true
+		)  
 SELECT  
- name, pizza_type_id,  
-  count(ingredients) AS total_ingredientes  
-FROM INGREDIENTES  
-GROUP BY name, pizza_type_id  
-ORDER BY total_ingredientes DESC  
+	name, 
+	pizza_type_id,  
+  	count(ingredients) AS total_ingredientes  
+	FROM INGREDIENTES  
+	GROUP BY name, pizza_type_id  
+	ORDER BY total_ingredientes DESC  
 )  
 SELECT tp.name, per_sold, total_ventas_pizza, total_ingredientes  
 FROM total_final AS tp inner join total_ingredientes_final USING (pizza_type_id)  
