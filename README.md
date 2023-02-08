@@ -106,7 +106,8 @@ WITH ingredients_per_pizza AS (
 	  pt.name,  
 	  y.ingredients  
    FROM pizzas_types AS pt  
-   LEFT   JOIN unnest(string_to_array(pt.ingredients, ', '))  AS y(ingredients) ON true),  
+   LEFT   JOIN unnest(string_to_array(pt.ingredients, ', '))  AS y(ingredients) ON true
+),  
  number_ingredients_pizza AS (  
     SELECT  
  	name, pizza_type_id,  
