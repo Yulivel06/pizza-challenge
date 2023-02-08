@@ -77,7 +77,7 @@ WITH revenue_order AS (
    INNER JOIN order_details AS od USING (order_id)  
    INNER JOIN pizzas AS p USING (pizza_id)  
    GROUP BY order_id  
-    )  
+ 	)  
 SELECT ROUND(AVG(revenue_order),2) avg_revenue_order  
 FROM revenue_order;  
   
@@ -106,7 +106,7 @@ WITH ingredients_per_pizza AS (
 	  pt.name,  
 	 y.ingredients  
   FROM pizzas_types AS pt  
-        LEFT   JOIN unnest(string_to_array(pt.ingredients, ', '))  AS y(ingredients) ON true),  
+  LEFT   JOIN unnest(string_to_array(pt.ingredients, ', '))  AS y(ingredients) ON true),  
   number_ingredients_pizza AS (  
     SELECT  
  	name, pizza_type_id,  
